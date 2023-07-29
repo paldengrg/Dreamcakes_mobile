@@ -17,10 +17,7 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -28,10 +25,7 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -49,23 +43,40 @@ class DefaultFirebaseOptions {
     }
   }
 
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyByFt3iTzdd5k9J5itBOeYBWCqIYawtdMI',
+    appId: '1:880319531978:web:fa1626fe8522a988835d33',
+    messagingSenderId: '880319531978',
+    projectId: 'dreamcakes-mob',
+    authDomain: 'dreamcakes-mob.firebaseapp.com',
+    storageBucket: 'dreamcakes-mob.appspot.com',
+  );
+
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBqrRVnjdRIrQ-ZzZaZXBpGVEDqP77W0mI',
-    appId: '1:862963623225:android:d8df8214a5d5cd8770b4e8',
-    messagingSenderId: '862963623225',
-    projectId: 'albert-softwarica-test-1001',
-    databaseURL: 'https://albert-softwarica-test-1001-default-rtdb.firebaseio.com',
-    storageBucket: 'albert-softwarica-test-1001.appspot.com',
+    apiKey: 'AIzaSyBbsnzkegb_KVn7C-iILIa3skcCYTYgg64',
+    appId: '1:880319531978:android:c02456660223f141835d33',
+    messagingSenderId: '880319531978',
+    projectId: 'dreamcakes-mob',
+    storageBucket: 'dreamcakes-mob.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCnI5OOrXH1owBqoFLNHUeWw9RI_TDjv_o',
-    appId: '1:862963623225:ios:59e69aa52ec518e570b4e8',
-    messagingSenderId: '862963623225',
-    projectId: 'albert-softwarica-test-1001',
-    databaseURL: 'https://albert-softwarica-test-1001-default-rtdb.firebaseio.com',
-    storageBucket: 'albert-softwarica-test-1001.appspot.com',
-    iosClientId: '862963623225-s4ld8jqv257pntgoibst6dl9gp292jco.apps.googleusercontent.com',
+    apiKey: 'AIzaSyA1ldx7xKKsDWnYDIAvQL21sxjkMcSLvvY',
+    appId: '1:880319531978:ios:a50a0bac0783cb79835d33',
+    messagingSenderId: '880319531978',
+    projectId: 'dreamcakes-mob',
+    storageBucket: 'dreamcakes-mob.appspot.com',
+    iosClientId: '880319531978-0qu2a9ed6ptgpoggtqgqctaantmaf1b1.apps.googleusercontent.com',
+    iosBundleId: 'com.example.nBaz',
+  );
+
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyA1ldx7xKKsDWnYDIAvQL21sxjkMcSLvvY',
+    appId: '1:880319531978:ios:a50a0bac0783cb79835d33',
+    messagingSenderId: '880319531978',
+    projectId: 'dreamcakes-mob',
+    storageBucket: 'dreamcakes-mob.appspot.com',
+    iosClientId: '880319531978-0qu2a9ed6ptgpoggtqgqctaantmaf1b1.apps.googleusercontent.com',
     iosBundleId: 'com.example.nBaz',
   );
 }
