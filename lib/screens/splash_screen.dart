@@ -50,9 +50,9 @@ class _SplashScreenState extends State<SplashScreen> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Image.asset("assets/images/splash.gif"),
+              Image.asset("assets/images/IMG_20230727_185611.png"),
               SizedBox(height: 100,),
-              Text("Bazz", style: TextStyle(
+              Text("Dreamcakes Homebakery", style: TextStyle(
                 fontSize: 22
               ),)
             ],
