@@ -48,7 +48,7 @@ class _AccountScreenState extends State<AccountScreen> {
             height: 10,
           ),
           Image.asset(
-            "assets/images/logo.png",
+            "assets/images/IMG_20230727_185611.png",
             height: 100,
             width: 100,
           ),

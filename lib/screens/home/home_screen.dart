@@ -31,7 +31,6 @@ class _HomeScreenState extends State<HomeScreen> {
       _authViewModel = Provider.of<AuthViewModel>(context, listen: false);
       _categoryViewModel = Provider.of<CategoryViewModel>(context, listen: false);
       _productViewModel = Provider.of<ProductViewModel>(context, listen: false);
-      refresh();
     });
     super.initState();
   }
@@ -59,17 +58,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-
-                        Image.asset(
-                          "assets/images/banner.jpg",
-                          height: 200,
-                          width: double.infinity,
-                          fit: BoxFit.fill,
-                        ),
-                        SizedBox(
-                          height: 20,
-                        ),
                         WelcomeText(authVM),
+                        SizedBox(height: 20),
+                        Text("Categories",style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
                         Container(
                           margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                           child: SingleChildScrollView(
@@ -88,6 +79,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             child: Text(
                               "Products",
                               style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+
                             )),
                         Container(
                           margin: EdgeInsets.symmetric(horizontal: 10),
@@ -139,11 +131,16 @@ class _HomeScreenState extends State<HomeScreen> {
             padding: EdgeInsets.all(15),
             child: Row(
               children: [
-                Expanded(child: Container()),
-                Expanded(child: Image.asset("assets/images/logo.png", height: 50, width: 50,)),
+                // Expanded(child: Container()),
+                // Expanded(child:
+                Image.asset("assets/images/IMG_20230727_185611.png",
+                  height: 35,
+                  width: 35,
+                  alignment: Alignment.centerLeft,
+                  fit: BoxFit.cover,),
                 Expanded(
                     child: Align(
-                      alignment: Alignment.centerRight,
+                      alignment: Alignment.topCenter,
                         child: Container()
                         // Icon(Icons.search, size: 30,)
                     )),
@@ -233,7 +230,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     fit: BoxFit.cover,
                     errorBuilder: (BuildContext context, Object exception, StackTrace? stackTrace) {
                       return Image.asset(
-                        'assets/images/logo.png',
+                        'assets/images/IMG_20230727_185611.png',
                         height: 300,
                         width: double.infinity,
                         fit: BoxFit.cover,

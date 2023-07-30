@@ -80,7 +80,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               child: Column(
                 children: [
                   Image.asset(
-                    "assets/images/logo.png",
+                    "assets/images/IMG_20230727_185611.png",
                     height: 100,
                     width: 100,
                   ),
@@ -95,7 +95,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         color: Colors.black),
                     decoration: InputDecoration(
                       enabledBorder: OutlineInputBorder(
-
                           borderRadius: BorderRadius.circular(20)
                       ),
                       focusedBorder: OutlineInputBorder(
@@ -104,7 +103,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       border: InputBorder.none,
                       prefixIcon: Icon(
                         Icons.person,
-                        color: Colors.black,
+                        color: Colors.pink.shade200,
                         size: 22.0,
                       ),
                       hintText: 'First Name',
@@ -132,7 +131,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       border: InputBorder.none,
                       prefixIcon: Icon(
                         Icons.phone,
-                        color: Colors.black,
+                        color: Colors.pink.shade200,
                         size: 22.0,
                       ),
                       hintText: 'Phone Number',
@@ -160,7 +159,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       border: InputBorder.none,
                       prefixIcon: Icon(
                         Icons.verified_user,
-                        color: Colors.black,
+                        color: Colors.pink.shade200,
                         size: 22.0,
                       ),
                       hintText: 'Username',
@@ -188,7 +187,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       border: InputBorder.none,
                       prefixIcon: Icon(
                         Icons.email,
-                        color: Colors.black,
+                        color: Colors.pink.shade200,
                         size: 22.0,
                       ),
                       hintText: 'Email Address',
@@ -215,7 +214,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       prefixIcon: const Icon(
                         Icons.lock,
                         size: 22.0,
-                        color: Colors.black,
+                        color: Colors.pinkAccent,
                       ),
                       hintText: 'Password',
                       hintStyle: const TextStyle(
@@ -231,7 +230,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               ? Icons.visibility
                               : Icons.visibility_off,
                           size: 20.0,
-                          color: Colors.black,
+                          color: Colors.pink.shade200,
                         ),
                       ),
                     ),
@@ -256,7 +255,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       prefixIcon: const Icon(
                         Icons.lock_clock,
                         size: 22.0,
-                        color: Colors.black,
+                        color: Colors.pinkAccent,
                       ),
                       hintText: 'Confirm Password',
                       hintStyle: const TextStyle(
@@ -272,7 +271,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               ? Icons.visibility
                               : Icons.visibility_off,
                           size: 20.0,
-                          color: Colors.black,
+                          color: Colors.pink.shade200,
                         ),
                       ),
                     ),
@@ -289,6 +288,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               )
                           ),
                           padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.symmetric(vertical: 20)),
+                          backgroundColor: MaterialStateProperty.all<Color>(Colors.pink.shade200), // Change the button color to red
+
                         ),
                         onPressed: (){
                             register();
@@ -307,7 +308,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         onTap: (){
                           Navigator.of(context).pop();
                         },
-                          child: Text("Sign in", style: TextStyle(color: Colors.blue),))
+                          child: Text("Sign in", style: TextStyle(color: Colors.pink.shade200),))
                     ],
                   ),
 

@@ -17,11 +17,11 @@ class CategoryViewModel with ChangeNotifier {
     _categories=[];
     try{
       var response = await _categoryRepository.getCategories();
+      _categories.clear();
       for (var element in response) {
-
-        print(element.id);
         _categories.add(element.data());
       }
+      print('Categories updated: ${_categories.length} categories');
       notifyListeners();
     }catch(e){
       print(e);

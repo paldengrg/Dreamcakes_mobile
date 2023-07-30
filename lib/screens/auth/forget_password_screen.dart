@@ -50,7 +50,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
               child: Column(
                 children: [
                   Image.asset(
-                    "assets/images/logo.png",
+                    "assets/images/IMG_20230727_185611.png",
                     height: 100,
                     width: 100,
                   ),
@@ -67,7 +67,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                       border: InputBorder.none,
                       prefixIcon: const Icon(
                         Icons.email,
-                        color: Colors.black,
+                        color: Colors.pinkAccent,
                         size: 22.0,
                       ),
                       hintText: 'Email Address',
@@ -83,6 +83,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                         style: ButtonStyle(
                           shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(borderRadius: BorderRadius.circular(20), side: BorderSide(color: Colors.blue))),
                           padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.symmetric(vertical: 20)),
+                          backgroundColor: MaterialStateProperty.all<Color>(Colors.pink.shade200),
                         ),
                         onPressed: () {
                           resetPassword();
@@ -108,7 +109,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                           },
                           child: Text(
                             "Sign In",
-                            style: TextStyle(color: Colors.blue),
+                            style: TextStyle(color: Colors.pink.shade200),
                           ))
                     ],
                   ),

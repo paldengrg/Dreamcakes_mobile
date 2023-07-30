@@ -65,7 +65,7 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Column(
                 children: [
                   Image.asset(
-                    "assets/images/logo.png",
+                    "assets/images/IMG_20230727_185611.png",
                     height: 100,
                     width: 100,
                   ),
@@ -83,7 +83,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       border: InputBorder.none,
                       prefixIcon: Icon(
                         Icons.email,
-                        color: Colors.black,
+                        color: Colors.pink.shade200,
                         size: 22.0,
                       ),
                       hintText: 'Email Address',
@@ -104,7 +104,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       prefixIcon: const Icon(
                         Icons.lock,
                         size: 22.0,
-                        color: Colors.black,
+                        color: Colors.pinkAccent,
                       ),
                       hintText: 'Password',
                       hintStyle: const TextStyle(fontFamily: 'WorkSansSemiBold', fontSize: 17.0),
@@ -117,7 +117,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         child: Icon(
                           _obscureTextPassword ? Icons.visibility : Icons.visibility_off,
                           size: 20.0,
-                          color: Colors.black,
+                          color: Colors.pink.shade200,
                         ),
                       ),
                     ),
@@ -145,6 +145,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         style: ButtonStyle(
                           shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(borderRadius: BorderRadius.circular(20), side: BorderSide(color: Colors.blue))),
                           padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.symmetric(vertical: 20)),
+                          backgroundColor: MaterialStateProperty.all<Color>(Colors.pink.shade200), // Change the button color to pink
                         ),
                         onPressed: () {
                           login();
@@ -170,7 +171,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           },
                           child: Text(
                             "Sign up",
-                            style: TextStyle(color: Colors.blue),
+                            style: TextStyle(color: Colors.pink.shade200),
                           ))
                     ],
                   ),
